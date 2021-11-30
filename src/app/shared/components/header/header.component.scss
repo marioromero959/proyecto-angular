@@ -3,8 +3,13 @@ nav > a {
     text-decoration: none;
 }
 nav > a.active{
-    background-color: grey;
+    background-color: #f5b47b;
 }   
 .header-row{
-    width: 100%;
+    width: 95%;
+}
+.menu{
+    display: flex;
+    justify-content: space-around;
+    width: 25%;
 }

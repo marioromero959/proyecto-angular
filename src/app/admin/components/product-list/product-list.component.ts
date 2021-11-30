@@ -14,10 +14,10 @@ export class ProductListComponent implements OnInit {
   constructor(private productService: ProductsService) { }
 
   ngOnInit(): void {
-    this.fetchProducts();
+    // this.fetchProducts();
   }
 
-  fetchProducts(){
+ /*  fetchProducts(){
     this.productService.getAllProducts().subscribe(products => {
       this.products = products;
     });
@@ -29,5 +29,5 @@ export class ProductListComponent implements OnInit {
         console.log(rta);
         this.fetchProducts();
       });
-  }
+  } */
 }

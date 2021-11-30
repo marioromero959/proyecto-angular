@@ -1,24 +1,10 @@
+
 <app-banner></app-banner>
 
-<section>
-    <h3>Promociones</h3>
-<div class="container">
-    <div class="productos">
-    <mat-card>
-        <mat-card-header>
-            <mat-card-title>
-                hola
-            </mat-card-title>
-            <mat-card-subtitle>
-                    toy
-            </mat-card-subtitle>
-        </mat-card-header>
-        <mat-card-content>
-            <p>sidufhsd</p>
-        </mat-card-content>
-    </mat-card>
-    <button mat-button color="primary">Basic</button>
-</div>
-<img src="../../../../assets/img-velka/post30.jpg" alt="">
-</div>
-</section>
+<h3>Promociones</h3>
+<app-promo></app-promo>
+<br>
+
+<app-promo [entrada]="test"></app-promo>
+
+<!-- Ver input y output -->

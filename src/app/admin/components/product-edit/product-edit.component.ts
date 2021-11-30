@@ -27,20 +27,20 @@ export class ProductEditComponent implements OnInit {
     this.activeRoute.params.subscribe((params: Params) => {
       this.id = params.id;
       const id = params.id;
-      this.productsService.getProduct(this.id).subscribe(product => {
+ /*      this.productsService.getProduct(this.id).subscribe(product => {
         this.form.patchValue(product);
-      });
+      }); */
     });
   }
 
   saveProduct(event: Event){
     event.preventDefault();
-    if (this.form.valid){
+/*     if (this.form.valid){
       const product = this.form.value;
       this.productsService.updateProduct(this.id, product).subscribe((newProduct) => {
         this.router.navigate(['./admin/products']);
       });
-    }
+    } */
   }
   private buildForm(){
     this.form = this.formBuilder.group({

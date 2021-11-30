@@ -8,14 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class BannerComponent implements OnInit {
 
   images: string[] = [
-    '../../assets/banner1.jpg',
-    '../../assets/banner2.jpg',
+    '../../assets/banner1.png',
+    '../../assets/banner2.png',
     '../../assets/banner3.jpg',
   ];
 
   constructor() { }
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
 
 }

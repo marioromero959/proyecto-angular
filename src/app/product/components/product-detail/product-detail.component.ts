@@ -18,12 +18,12 @@ export class ProductDetailComponent implements OnInit {
   ngOnInit(){
     this.route.params.subscribe((params: Params) => {
       const id = params.id;
-      this.fetchProduct(id);
+      // this.fetchProduct(id);
     //  this.product = this.ProductService.getProduct(id);
     });
   }
 
-  fetchProduct(id: string){
+/*   fetchProduct(id: string){
     this.ProductService.getProduct(id).subscribe(product => {
     this.product = product;
     });
@@ -62,5 +62,5 @@ export class ProductDetailComponent implements OnInit {
     this.ProductService.deleteProduct('1').subscribe(rta => {
       console.log(rta);
     });
-  }
+  } */
 }

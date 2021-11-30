@@ -1,4 +1,5 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component, OnInit, AfterViewInit, Input } from '@angular/core';
+import { ProductsService } from 'src/app/core/services/products/products.service';
 import { Swiper } from 'swiper/bundle';
 
 @Component({
@@ -9,25 +10,24 @@ import { Swiper } from 'swiper/bundle';
 export class HomeComponent implements OnInit, AfterViewInit {
 
   mySwiper: Swiper;
-
-  constructor() { }
+  products;
+  test = []
+  constructor(private ps: ProductsService) { }
 
   ngOnInit() {
+    this.products = this.ps.getAllProducts();
+    this.test.push(this.products[0])  
   }
 
   ngAfterViewInit(){
     this.mySwiper = new Swiper ('.swiper-container', {
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
       loop: true,
       pagination: {
         el: '.swiper-pagination',
         clickable: true,
       },
       autoplay: {
-        delay: 3000,
+        delay: 1500,
         disableOnInteraction: false,
       }
     });
