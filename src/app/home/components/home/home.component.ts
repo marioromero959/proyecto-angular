@@ -14,25 +14,6 @@ export class HomeComponent implements OnInit, AfterViewInit {
   test = []
   constructor(private ps: ProductsService) { }
 
-
-  public test2(): void{
-  }
-
-  ngOnInit() {
-    this.products = this.ps.getAllProducts();
-    this.test.push(this.products[0])
-  }
-  public test(): void{
-    const array = [1,
-      2,
-      3,
-      4,
-      5,
-      6,
-      7,
-      8,
-      9];
-  }
   ngAfterViewInit(){
     this.mySwiper = new Swiper ('.swiper-container', {
       loop: true,
@@ -46,4 +27,9 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     });
   }
+  ngOnInit() {
+    this.products = this.ps.getAllProducts();
+    this.test.push(this.products[0]);
+  }
+
 }
