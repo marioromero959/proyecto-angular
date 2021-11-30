@@ -13,6 +13,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
   products;
   test = [];
 
+
   constructor(private ps: ProductsService) {
   }
 
@@ -24,6 +25,7 @@ export class HomeComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
     this.mySwiper = new Swiper('.swiper-container', {
+
       loop: true,
       pagination: {
         el: '.swiper-pagination',
@@ -35,4 +37,5 @@ export class HomeComponent implements OnInit, AfterViewInit {
       }
     });
   }
+
 }
