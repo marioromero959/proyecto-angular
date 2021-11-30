@@ -14,9 +14,13 @@ export class HomeComponent implements OnInit, AfterViewInit {
   test = []
   constructor(private ps: ProductsService) { }
 
+
+  public test2(): void{
+  }
+
   ngOnInit() {
     this.products = this.ps.getAllProducts();
-    this.test.push(this.products[0])  
+    this.test.push(this.products[0])
   }
   public test(): void{
     const array = [1,
